@@ -1,11 +1,20 @@
 import Link from "next/link";
-import { LogoBig } from "@/components/export/export";
+import { Context, LogoBig } from "@/components/export/export";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+
 export const StepOne = () => {
   const { push } = useRouter();
-  const handleClick = () => {
-    push("/stepTwo");
+  const handleChange = (event) => {
+    const { value } = event.target;
+
+    setSignUpUserInfo({
+      ...setSignUpUserInfo,
+      currencyType: value,
+    });
   };
+
+  const { signUpUserInfo, setSignUpUserInfo } = useContext(Context);
   return (
     <div className="w-screnn h-screen flex flex-col  items-center p-[100px]  ">
       <div className="flex flex-col items-center gap-10 ">
@@ -25,7 +34,11 @@ export const StepOne = () => {
           </div>
           <h1 className=" text-white text-3xl">Select base currency</h1>
         </div>
-        <select className="select select-bordered w-full max-w-xs">
+        <select
+          onChange={handleChange}
+          value={signUpUserInfo.currencyType}
+          className="select select-bordered w-full max-w-xs"
+        >
           <option selected>MNT - Mongolian currency</option>
           <option>USD - United State currency</option>
         </select>

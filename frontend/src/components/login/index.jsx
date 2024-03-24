@@ -48,26 +48,9 @@ export const Login = () => {
       }
     },
   });
-  // const fetchUsers = async () => {
-  //   try {
-  //     const res = await fetch(API_ENDPOINT, {
-  //       method: "POST",
-  //       headers: {
-  //         Accept: "application/json, text/plain, */*",
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify({ name, email, password }),
-  //     });
-  //     const data = await res.json();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+
   useEffect(() => {}, [warningMessage]);
 
-  // const addUser = () => {
-  //   fetchUsers();
-  // };
   const handleSignup = () => {
     setSignUp(true);
     setWarningMessage("");
