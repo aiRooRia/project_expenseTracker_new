@@ -9,12 +9,6 @@ export const LastRecords = () => {
         <Records />
         <Records />
         <Records />
-        <Records />
-        <Records />
-        <Records />
-        <Records />
-        <Records />
-        <Records />
       </div>
     </div>
   );

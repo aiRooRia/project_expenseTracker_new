@@ -1,10 +1,14 @@
-export const modalCategory = () => {
+import { DropIcon } from "../export/export";
+
+export const ModalCategory = ({ showCategory, onClose }) => {
+  if (!showCategory) return null;
+
   return (
     <div className=" fixed inset-0 bg-black    w-screem h-screen bg-opacity-80 flex justify-center items-center">
       <div className="w-[449px] bg-[#191b1d]  rounded-xl">
         <div className="p-[20px] border-b-2 flex justify-between">
           <p>Add category</p>
-          <p onClick={onCloses}>X</p>
+          <p onClick={onClose}>X</p>
         </div>
         <div className="p-[20px] flex flex-col gap-4">
           <div className="flex gap-3 justify-between">
