@@ -16,6 +16,7 @@ export const ContextProvider = ({ children }) => {
       setIsLoading(false);
     }, 1000);
   };
+
   return (
     <Context.Provider
       value={{ isLoading, startLoading, signUpUserInfo, setSignUpUserInfo }}

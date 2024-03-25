@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const NavBar = () => {
   return (
     <div className="navbar bg-base-100">

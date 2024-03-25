@@ -1,4 +1,4 @@
-import {Navibar} from "@/components/export/export"
+import { Navibar } from "@/components/export/export";
 
 const Home = () => {
   return (
@@ -165,18 +165,9 @@ const Home = () => {
             </div>
             <div className="flex flex-col gap-4">
               <p>Today</p>
-              <RecordsWithBg />
-              <RecordsWithBg />
-              <RecordsWithBg />
-              <RecordsWithBg />
-              <RecordsWithBg />
-              <RecordsWithBg />
             </div>
             <div className="flex flex-col gap-4">
               <p>Yesterday</p>
-              <RecordsWithBg />
-              <RecordsWithBg />
-              <RecordsWithBg />
             </div>
           </div>
         </div>
