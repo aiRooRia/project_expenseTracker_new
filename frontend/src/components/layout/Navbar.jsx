@@ -1,19 +1,27 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { Fragment } from "react";
 
-export const NavBar = () => {
+export const NavBar = ({ setShowAdd }) => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1 gap-3">
         <img src="beer.svg" alt="" width={35} />
-        <button href={"/"} className=" text-2xl">
+        <Link href={"/dashboard"} className=" text-2xl">
           Dashboard
-        </button>
-        <button href={"/records"} className=" text-2xl w-[100px ]">
+        </Link>
+        <Link href={"/records"} className=" text-2xl w-[100px ]">
           Records
-        </button>
+        </Link>
       </div>
       <div className="flex-none gap-2">
-        <button className="btn btn-primary rounded-full">+ Record</button>
+        <button
+          onClick={() => {
+            setShowAdd(true);
+          }}
+          className="btn btn-primary rounded-full"
+        >
+          + Record
+        </button>
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
@@ -41,7 +49,7 @@ export const NavBar = () => {
               <a>Settings</a>
             </li>
             <li>
-              <button href={"login"}>Logout</button>
+              <Link href={"/"}>Logout</Link>
             </li>
           </ul>
         </div>
